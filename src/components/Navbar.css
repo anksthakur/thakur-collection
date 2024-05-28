@@ -12,7 +12,8 @@
 .search-cart {
     display: flex;
     justify-content: flex-end;
-    margin-right: 10px;
+    width: 100%;
+    gap: 10px;
 }
 
 .navbar {
@@ -21,15 +22,17 @@
     align-items: center;
 }
 
-ul {
-    display: flex;
+.menu ul {
     gap: 20px;
     list-style: none;
-}
-
-.search-cart {
     display: flex;
-    gap: 30px;
+}
+.logo{
+    width: 100%;
+    text-align: center;
+}
+.menu{
+    width: 100%;
 }
 
 .wrapper {
@@ -109,20 +112,23 @@ i {
 
 .cards {
     display: flex;
-    gap: 5px;
-    padding: 0 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .card {
     width: 25%;
-    height: 300px;
     text-align: center;
+    margin: 40px 0;
+    padding: 0 10px;
+    height: 300px;
 }
 
 .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
+    object-fit: fill;
 }
 
 .card-text {
@@ -131,12 +137,13 @@ i {
     font-size: 34px;
     font-style: italic;
     font-weight: 700;
+    
 }
 
 .card h5 {
     font-size: 10px;
     font-weight: 600;
-    text-decoration: none solid rgba(0,0,0,0.46);
+    color: rgb(150, 148, 148);
 }
 
 .nav-card {
@@ -148,7 +155,7 @@ i {
 .card h4 {
     font-size: 11px;
     font-weight: 700;
-    text-decoration: none solid rgba(0,0,0,0.46);
+    color: rgb(150, 148, 148);
 }
 
 .footer {
@@ -176,4 +183,22 @@ i {
 hr {
     padding-top: 20px;
     margin-top: 20px;
+}
+.show-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+button:hover{
+    background-color: blue;
+    color: white;
+}
+.nav-view:hover{
+    background-color: #fff;
+    color: black;
+}
+.showall{
+    display: flex;
+    justify-content: space-between;
+     
 }
