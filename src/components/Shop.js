@@ -38,6 +38,7 @@ const Shop = () => {
   
   return (
     <>
+    <div className='sorting'>
       <div className='wrapper'>
         <div className='showall'>
           <div className='show'>{show >= data.length ? `Showing all ${data.length} results` : `Showing ${show} of ${data.length} results`}</div>
@@ -68,6 +69,7 @@ const Shop = () => {
       {isError && <div>Error: {isError}</div>}
       <div className='show-btn'>
         {show < data.length && <button onClick={showAll}>Show All</button>}
+      </div>
       </div>
     </>
   )

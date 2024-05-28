@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
+    <div className="footer-main">
+        <div className='wrapper'>
     <div className='footer'>
         <div className='footer-text'>
             <h3>Menu</h3>
@@ -40,6 +42,8 @@ const Footer = () => {
                 <NavLink className="footer-nav"><h5>Instagram</h5></NavLink>
                 <NavLink className="footer-nav"><h5>Pinterest</h5></NavLink>
             </ul>
+        </div>
+        </div>
         </div>
     </div>
     <hr></hr>

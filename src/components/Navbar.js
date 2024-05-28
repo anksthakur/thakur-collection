@@ -5,6 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   return (
   <>
+  <div className='navbar-main'>
     <div className='wrapper' >
     <nav className="navbar">
       <div className='menu'>
@@ -23,6 +24,7 @@ const Navbar = () => {
       <i className="fa-solid fa-lg fa-bag-shopping"></i>
       </div>
     </nav>
+    </div>
     </div>
     </>
   );
