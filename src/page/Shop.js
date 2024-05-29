@@ -59,7 +59,7 @@ const Shop = () => {
           <div key={index} className='card'>
             <img src={item.image} alt={item.title} />
             <h5>{item.type}</h5>
-            <NavLink className="nav-card" to={`/card${index + 1}`}>{item.title}</NavLink>
+            <NavLink className="nav-card" to={`/product/${index + 1}`}>{item.title}</NavLink>
             <h4>${item.price}</h4>
           </div>
         )) : (

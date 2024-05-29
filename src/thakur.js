@@ -1,13 +1,13 @@
 let Data = [
     {
-        "id": "1",
+        "id": 1,
         "title": "Timeless Classic Collection",
         "type": "work",
         "price": 124.90,
         "image": "/work.jpg"
     },
     {
-        "id": "2",
+        "id": 2,
         "title": "Full Seleve",
         "type": "casual",
         "price": 173.60,

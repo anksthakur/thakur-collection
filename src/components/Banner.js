@@ -1,8 +1,8 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Banner = ({ pathName }) => {
-    console.log(pathName);
+    console.log(pathName.split("/")[1])
     return (
         <>
             <div className='back-img'>
@@ -12,9 +12,13 @@ const Banner = ({ pathName }) => {
                         pathName === "/about-us" ? "watch.jpg" : 
                         pathName === "/contact-us" ? "seleve.jpg" : 
                         pathName === "/shop" ? "shop.jpg" : 
+                        pathName === "/admin" ? "r.jpg" :
+                        
+                        pathName.split("/")[1]==="product"? "/b.jpg":
+                        // pathName === "/product/*" ? "b.jpg" : 
                         "default.jpg"
                     } 
-                    alt='back' 
+                    alt='anup' 
                 />
             </div>
             <div className='banner'>
@@ -25,7 +29,8 @@ const Banner = ({ pathName }) => {
                           pathName === "/" ? "Effortlessly Blend Comfort & Style!" : 
                           pathName === "/about-us" ? "About Us" : 
                           pathName === "/contact-us" ? "Contact Us" : 
-                          pathName === "/shop" ? "Shop" : ""
+                          pathName === "/shop" ? "Shop"  :
+                          pathName.split("/")[1]=== "product" ? "Product Page" : "" 
                         }
                     </h1>
                 </div>
@@ -41,7 +46,7 @@ const Banner = ({ pathName }) => {
                 )}
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Banner
+export default Banner;
