@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 
+
+
 const Product = () => {
   let { id } = useParams();
-  console.log('id :',id)
+  //console.log('id :',id)
   return (
     <>
-    <Navbar style={{backgroundColor : 'red'}}/>
+     <Navbar/>
     <ProductInfo id={id}/>
     </>
   )

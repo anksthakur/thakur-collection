@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Banner = ({ pathName, img, text1, text2 ,text3 }) => {
     return (
         <>
-            <div className='back-img' style={{backgroundImage: `url(${img})`,backgroundPosition:'center'}}>
+            <div className='back-img' style={{backgroundImage: `url(${img})`,backgroundPosition:'center',backgroundRepeat:'no-repeat' ,backgroundSize:'cover'}}>
             <div className='banner'>
                 {/* <h5>{pathName === "/" ? "CASUAL & EVERYDAY" : ""}</h5> */}
                 <div className='banner-p'>

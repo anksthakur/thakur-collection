@@ -1,35 +1,68 @@
-import React from 'react'
+import React, {  useEffect, useState } from 'react';
+import Data from "../thakur";
 
-const ProductInfo = ({id}) => {
+
+const ProductInfo = ({ id }) => {
+  const [data, setData] = useState(null);
+  const [item, setItem] = useState(1);
+
+  const getData = async () => {
+    const product = Data.find((item) => item.id == id);
+    setData(product);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
+  const incDec = () => {
+    if (item > 1) {
+      setItem(item - 1);
+    }
+  }
+
+  const addCart = () => {
+    console.log(data)
+    addCart(item);
+
+  }
+
   return (
     <>
-    <div className='product'>
-        <div className='wrapper'>
-            <div className='product-parent'>
-                <div className="left-product">
-                    <h1>Left</h1>
-                </div>
-                <div className="right-product">
-                    <div className="right-pro-1">
-                        <h5>Type</h5>
-                        <h5>Title</h5>
-                    </div>
-                    <div className="right-pro-2">
-                        <div className="price"><h3>Price</h3>
-                        </div>
-                        <div className="btn-inc-dec">
-                            <button>-</button><span>value</span><button>+</button>
-                        </div>
-                        <div className='add-cart'>
-                          <button>ADD TO CART</button>
-                        </div>
-                    </div>
-                </div>
+      <div className="item-details">
+        <div className="wrapper">
+          <div className="item-details-inner">
+            <div className="left-part">
+              <img src={data.image} alt={data.title} />
             </div>
+            <div className="right-part">
+              <h6>{data.type}</h6>
+              <h5>{data.title}</h5>
+              <h4>
+                ${data.price}<span>& Free Shipping</span>
+              </h4>
+              <p>{data.description}</p>
+              <hr />
+              <div className="quantity">
+                <div className="quantity-amount">
+                  <input type="button" onClick={incDec} value="-" />
+                  <input type="text" value={item} readOnly />
+                  <input type="button" onClick={() => { setItem(item + 1) }} value="+" />
+                </div>
+                <div className="Add-to-cart">
+                  <input type="button" onClick={addCart} value="Add to Cart" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default ProductInfo
+export default ProductInfo;

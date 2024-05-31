@@ -24,11 +24,10 @@ const navigate = useNavigate();
  
  
 
-  return (
-    
+  return (  
     <>
     <Navbar/>
-    <Banner img={'lower.jpg'} text2={'Contact Us'}/>
+    <Banner img={'towel.jpg'}  text2={'Contact Us'} />
       <div className='contact-us'>
         <div className='wrapper'>
           <div className='contact'>
