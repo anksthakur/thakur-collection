@@ -8,7 +8,6 @@ import Shop from './page/Shop';
 import Admin from './page/Admin';
 import ContactUs from './page/ContactUs';
 import Home from './page/Home';
-import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Product from './page/Product';
 
@@ -35,7 +34,7 @@ function AppContent() {
     <>
         {currentPath === "/admin" ? "" : 
         <>
-        <Banner pathName={currentPath}/>
+        {/* <Banner pathName={currentPath}/> */}
         <Navbar />
        </>
         }
@@ -45,7 +44,8 @@ function AppContent() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        {/* <Route path="/:id" element={<Product/>}/> */}
+        <Route exact path="/product" element={<h1>Not found</h1>} />
+        <Route path="/product/:id" element={<Product/>}/>
       </Routes>
       {currentPath === "/admin" ? "" : 
       <Footer/>

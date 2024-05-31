@@ -1,49 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Banner = ({ pathName }) => {
-    console.log(pathName.split("/")[1])
+const Banner = ({ pathName, img, text1, text2 ,text3 }) => {
     return (
         <>
-            <div className='back-img'>
-                <img 
-                    src={ 
-                        pathName === "/" ? "back.jpg" : 
-                        pathName === "/about-us" ? "watch.jpg" : 
-                        pathName === "/contact-us" ? "seleve.jpg" : 
-                        pathName === "/shop" ? "shop.jpg" : 
-                        pathName === "/admin" ? "r.jpg" :
-                        
-                        pathName.split("/")[1]==="product"? "/b.jpg":
-                        // pathName === "/product/*" ? "b.jpg" : 
-                        "default.jpg"
-                    } 
-                    alt='anup' 
-                />
-            </div>
+            <div className='back-img' style={{backgroundImage: `url(${img})`,backgroundPosition:'center'}}>
             <div className='banner'>
-                <h5>{pathName === "/" ? "CASUAL & EVERYDAY" : ""}</h5>
-                <div className='banner-h1'>
-                    <h1>
-                        { 
-                          pathName === "/" ? "Effortlessly Blend Comfort & Style!" : 
-                          pathName === "/about-us" ? "About Us" : 
-                          pathName === "/contact-us" ? "Contact Us" : 
-                          pathName === "/shop" ? "Shop"  :
-                          pathName.split("/")[1]=== "product" ? "Product Page" : "" 
-                        }
-                    </h1>
-                </div>
+                {/* <h5>{pathName === "/" ? "CASUAL & EVERYDAY" : ""}</h5> */}
                 <div className='banner-p'>
-                    <p>
-                        { 
-                          pathName === "/" ? "Effortlessly blend comfort and style with our Casual & Everyday collection, featuring cozy sweaters, versatile denim, laid-back tees, and relaxed-fit joggers for your everyday adventures" : ""
-                        }
-                    </p>
+                <p>{text1}</p>
                 </div>
+                <div className='banner-h1'>
+                <h1>{text2}</h1> 
+                </div>
+                <div className='banner-p2'>
+                    <p>{text3}</p>
+                </div>
+                
                 {pathName === "/" && ( 
                     <NavLink to="/shop" className="nav-view">VIEW COLLECTION</NavLink>
                 )}
+            </div>
             </div>
         </>
     );

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Data from "../thakur"
+import Navbar from '../components/Navbar';
+import Banner from '../components/Banner';
 
 const Shop = () => {
   const [isError, setIsError] = useState("");
@@ -38,6 +40,8 @@ const Shop = () => {
   
   return (
     <>
+    <Navbar/>
+    <Banner img={'shop.jpg'} text2={'Shop Page'}/>
     <div className='sorting'>
       <div className='wrapper'>
         <div className='showall'>

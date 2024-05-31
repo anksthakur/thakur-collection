@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Banner from '../components/Banner';
 // import { Link } from 'react-router-dom';
 // import { useNavigate} from 'react-router-dom';
 
@@ -25,7 +27,8 @@ const navigate = useNavigate();
   return (
     
     <>
-    
+    <Navbar/>
+    <Banner img={'lower.jpg'} text2={'Contact Us'}/>
       <div className='contact-us'>
         <div className='wrapper'>
           <div className='contact'>

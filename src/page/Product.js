@@ -1,33 +1,17 @@
 import React from 'react'
+import ProductInfo from '../components/ProductInfo';
+import { useParams } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 
 const Product = () => {
-  return ('xxxx'
-    // <>
-    // <div className='product'>
-    //     <div className='wrapper'>
-    //         <div className='product-parent'>
-    //             <div className="left-product">
-    //                 <h1>Left</h1>
-    //             </div>
-    //             <div className="right-product">
-    //                 <div className="right-pro-1">
-    //                     <h5>Type</h5>
-    //                     <h5>Title</h5>
-    //                 </div>
-    //                 <div className="right-pro-2">
-    //                     <div className="price"><h3>Price</h3>
-    //                     </div>
-    //                     <div className="btn-inc-dec">
-    //                         <button>-</button><span>value</span><button>+</button>
-    //                     </div>
-                        
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
-    // </>
+  let { id } = useParams();
+  console.log('id :',id)
+  return (
+    <>
+    <Navbar style={{backgroundColor : 'red'}}/>
+    <ProductInfo id={id}/>
+    </>
   )
 }
 

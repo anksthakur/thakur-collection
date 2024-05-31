@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
+import Banner from '../components/Banner'
 
 const AboutUs = () => {
   return (
     <>
+    <Navbar/>
+    <Banner img={"seleve.jpg"} text2={"About Us"}/>
     <div className='main'>
     <div className='wrapper'>
     <div className='content'>

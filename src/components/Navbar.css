@@ -49,7 +49,6 @@
     width: 33.33%;
     display: flex;
     justify-content: center;
-    background-color: antiquewhite;
 
 }
 
@@ -64,7 +63,7 @@
 }
 
 .nav {
-    color: black;
+    color: white;
     font-weight: 600;
 }
 
@@ -115,7 +114,7 @@
 
 i {
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
 .banner-p {

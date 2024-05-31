@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Data from "../thakur"
+import Banner from '../components/Banner';
 
 const Home = () => {
   const [isError, setIsError] = useState("");
@@ -27,6 +28,7 @@ const Home = () => {
 
   return (
     <>
+    <Banner img={'back.jpg'} text1={'CASUAL & EVERYDAY'} text2={'Effortlessly Blend Comfort & Style!'} text3={'Effortlessly blend comfort and style with our Casual & Everyday collection, featuring cozy sweaters, versatile denim, laid-back tees, and relaxed-fit joggers for your everyday adventures'} pathName={'/'}/>
       <div className='card-text'><h1>Most Popular</h1></div>
       <div className='cards'>
         {data.length > 0 ? data.slice(0, show).map((item, index) => (
