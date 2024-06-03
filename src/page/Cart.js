@@ -1,40 +1,58 @@
-import React from "react";
-import { Scrollbars } from "react-custom-scrollbars-2";
-import Items from "../components/Items";
+import React, { createContext, useEffect, useReducer} from "react";
+import CartContext from "../components/CartContext";
+import thakur from '../thakur'
+import { reducer } from "../components/Reducer";
 
+// useContext context create kiya apna
+export const cartContext = createContext();
+//useReducer
+// initialState m humne data define kiya aur ye data state ke pass hai
+const initialState = {
+ item: thakur,
+ totalAmount : 0,
+ totalItem:0,
+};
 const Cart = () => {
-  return (
-    <>
-      <div className="cart">
-        <div className="wrapper">
-          <div className="cart-parent">
-            <h1>Your Cart items</h1>
-            <hr />
-          </div>
-          <section className="main-cart-section">
-            <h2>Shopping Cart</h2>
-            <p className="total-items">
-              You have <span className="total-items-count">0</span> items in
-              cart
-            </p>
+ const [state,dispatch] = useReducer(reducer,initialState);
+ // to delete item from cart
+ const removeItem = (id)=>{
+  return dispatch({
+    type:"REMOVE_ITEM",
+    payload:id,
+  })
+ }
+ // increment
+ const increment = (id)=>{
+  return dispatch({
+        type:"INCREMENT",
+        payload:id,
+  })
+ }
+ // decrement
+ const decrement = (id)=>{
+  return dispatch({
+        type:"DECREMENT",
+        payload:id,
+  })
+ }
+ // total amount
+ //useEffect
+useEffect(()=>{
+  dispatch({
+    type:"GET_TOTAL"
+  })
+  console.log("total");
+},[state.item]);
 
-            <div className="cart-items">
-              <div className="cart-items-container">
-                <Scrollbars style={{ height: 300 }}>
-                  <Items />
-                </Scrollbars>
-              </div>
-            </div>
-            <div className="card-total">
-              <h3>
-                Cart Total : <span>$20000</span>
-              </h3>
-              <button>Checkout</button>
-            </div>
-          </section>
-        </div>
-      </div>
-    </>
+  return (
+// context m CartContext m wrap kiya taki hume prop drilling na krni pde aur as a prop pass kiya value={thakur.js ko}
+// thakur file ko global pass kiya
+    // <cartContext.Provider value={thakur}>
+    //useReducer
+    <cartContext.Provider value={{...state,removeItem,increment,decrement}}>
+      <CartContext/>
+      </cartContext.Provider>
+   
   );
 };
 

@@ -5,7 +5,8 @@ let Data = [
         "type": "work",
         "price": 124.90,
         "image": "/work.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@ let Data = [
         "type": "casual",
         "price": 173.60,
         "image": "/watch.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@ let Data = [
         "type": "evening",
         "price": 112.90,
         "image": "/casual.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 4,
@@ -29,14 +32,16 @@ let Data = [
         "type": "casual",
         "price": 134.50,
         "image": "/evening.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },{
         "id": 5,
         "title": "Urban Chic Ensemble",
         "type": "Evening Dresses",
         "price": 121.90,
         "image": "/b.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 6,
@@ -44,7 +49,8 @@ let Data = [
         "type": "Activewear",
         "price": 129.60,
         "image": "/c.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 7,
@@ -52,7 +58,8 @@ let Data = [
         "type": "Work & Office",
         "price": 111.90,
         "image": "/h.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 8,
@@ -60,14 +67,16 @@ let Data = [
         "type": "Activewear",
         "price": 99.50,
         "image": "/r.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },{
         "id": 9,
         "title": "Timeless Classic Collection",
         "type": "work",
         "price": 121.90,
         "image": "/work.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 10,
@@ -75,7 +84,8 @@ let Data = [
         "type": "casual",
         "price": 175.60,
         "image": "/watch.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 11,
@@ -83,7 +93,8 @@ let Data = [
         "type": "evening",
         "price": 123.90,
         "image": "/casual.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 12,
@@ -91,7 +102,8 @@ let Data = [
         "type": "casual",
         "price": 154.50,
         "image": "/evening.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     }
     ,{
         "id": 13,
@@ -99,7 +111,8 @@ let Data = [
         "type": "Evening Dresses",
         "price": 124.90,
         "image": "/b.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 14,
@@ -107,7 +120,8 @@ let Data = [
         "type": "Activewear",
         "price": 141.60,
         "image": "/c.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 15,
@@ -115,7 +129,8 @@ let Data = [
         "type": "Work & Office",
         "price": 88.90,
         "image": "/h.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     },
     {
         "id": 16,
@@ -123,7 +138,8 @@ let Data = [
         "type": "Activewear",
         "price": 126.50,
         "image": "/r.jpg",
-        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication."
+        "description":"Crafted from soft, breathable fabrics, the relaxed fit provides a carefree silhouette, while thoughtful details add a touch of urban chic. Whether you are lounging at home or navigating a bustling day, our Timeless Classic Collection effortlessly combine ease with fashion, allowing you to move with relaxed confidence while making a statement of casual sophistication.",
+        "quantity":1
     }
 ]
 
