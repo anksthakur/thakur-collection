@@ -9,6 +9,7 @@ import ContactUs from './page/ContactUs';
 import Home from './page/Home';
 import Footer from './components/Footer';
 import Product from './page/Product';
+import Cart from './page/Cart';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function AppContent() {
 
   return (
     <>
-      {currentPath === "/admin" ? "" :
+      {currentPath === "/cart" ? "" :
         <>
           <Navbar currentPath={currentPath} />
         </>
@@ -40,8 +41,9 @@ function AppContent() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route exact path="/product" element={<h1>Not found</h1>} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
-      {currentPath === "/admin" ? "" :
+      {currentPath === "/cart" ? "" :
         <Footer />
       }
     </>

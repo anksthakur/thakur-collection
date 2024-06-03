@@ -24,7 +24,10 @@ const Navbar = ({currentPath}) => {
             </div>
             <div className='search-cart'>
               <i className="fa-solid fa-lg fa-magnifying-glass"></i>
-              <i className="fa-solid fa-lg fa-bag-shopping">0</i>
+              <div className="cart-i-p">
+              <NavLink to="/cart"><i className="fa-solid fa-lg fa-bag-shopping"></i></NavLink>
+              <p>0</p>
+              </div>
             </div>
           </nav>
         </div>
