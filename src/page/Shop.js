@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Data from "../thakur"
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 
 const Shop = () => {
   const [isError, setIsError] = useState("");
@@ -75,6 +76,7 @@ const Shop = () => {
         {show < data.length && <button onClick={showAll}>Show All</button>}
       </div>
       </div>
+      <Footer/>
     </>
   )
 }

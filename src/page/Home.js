@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Data from "../thakur"
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   const [isError, setIsError] = useState("");
@@ -28,6 +30,7 @@ const Home = () => {
 
   return (
     <>
+    <Navbar/>
     <Banner img={'back.jpg'} text1={'CASUAL & EVERYDAY'} text2={'Effortlessly Blend Comfort & Style!'} text3={'Effortlessly blend comfort and style with our Casual & Everyday collection, featuring cozy sweaters, versatile denim, laid-back tees, and relaxed-fit joggers for your everyday adventures'} pathName={'/'}/>
       <div className='card-text'><h1>Most Popular</h1></div>
       <div className='cards'>
@@ -47,6 +50,7 @@ const Home = () => {
       <div className='show-btn'>
         <button onClick={showMore}>Show More</button>
       </div>
+      <Footer/>
     </>
   )
 }

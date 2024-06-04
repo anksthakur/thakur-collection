@@ -3,12 +3,11 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 
-const Navbar = ({currentPath}) => {
+const Navbar = () => {
 
   return (
     <>
-      <div className='navbar-main' style={{ backgroundColor: `${currentPath?.split('/')[1] === 'product' ? 'black' : ""}` }}>
-
+      <div className='navbar-main' >
         <div className='wrapper' >
           <nav className="navbar">
             <div className='menu'>
@@ -25,7 +24,7 @@ const Navbar = ({currentPath}) => {
             <div className='search-cart'>
               <i className="fa-solid fa-lg fa-magnifying-glass"></i>
               <div className="cart-i-p">
-              <NavLink to="/cart"><i className="fa-solid fa-lg fa-bag-shopping"></i></NavLink>
+              <i className="fa-solid fa-lg fa-bag-shopping"></i>
               <p>0</p>
               </div>
             </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer';
 // import { Link } from 'react-router-dom';
 // import { useNavigate} from 'react-router-dom';
 
@@ -21,13 +22,11 @@ const navigate = useNavigate();
   console.log('Message :', message);
   navigate(`/admin?name=${name}&email=${email}&msg=${message}`);
  }
- 
- 
 
   return (  
     <>
     <Navbar/>
-    <Banner img={'towel.jpg'}  text2={'Contact Us'} />
+    <Banner img={'b.jpg'}  text2={'Contact Us'} />
       <div className='contact-us'>
         <div className='wrapper'>
           <div className='contact'>
@@ -106,6 +105,7 @@ const navigate = useNavigate();
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
