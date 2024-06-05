@@ -64,7 +64,7 @@
 }
 
 .nav {
-    color: white;
+    color: black;
     font-weight: 600;
 }
 
@@ -115,7 +115,7 @@
 
 i {
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 .banner-p {
