@@ -9,6 +9,7 @@ const Buynow = () => {
   console.log("Product ID Buy Now:", id);
 
   const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1); // Initialize quantity state
   const [isError, setIsError] = useState("");
   const navigate = useNavigate();
 
@@ -26,6 +27,11 @@ const Buynow = () => {
     getApiData();
   }, [id]);
 
+  const handleQuantityChange = (event) => {
+    const newQuantity = parseInt(event.target.value);
+    setQuantity(newQuantity); // Update quantity state
+  };
+
   const handleProceedToBuy = () => {
     navigate("/");
   };
@@ -33,6 +39,9 @@ const Buynow = () => {
   if (!product) {
     return <div>Loading...</div>;
   }
+
+  // Calculate total price based on product price and quantity
+  const totalPrice = product.price * quantity;
 
   return (
     <>
@@ -49,22 +58,22 @@ const Buynow = () => {
           <div className="item_details">
             <h3>Title : {product.title}</h3>
             <h3>Type : {product.type}</h3>
-            <h3 className='item_price'>Price : ${product.price}</h3>
+            <h3 className='item_price'>Price : ${totalPrice}</h3> {/* Display total price */}
             <div className='add_remove_select'>
-      <select>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        <option value='5'>5</option>
-      </select> 
-      <button className='remove-btn' style={{ cursor: "pointer" }}>Delete</button>
-    </div>
+              <select value={quantity} onChange={handleQuantityChange}> {/* Controlled input */}
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select> 
+              <button className='remove-btn' style={{ cursor: "pointer" }}>Delete</button>
+            </div>
           </div>
         </div>
         <div className='sub_item'>
-        <h3>SubTotal (1 item) :<span style={{fontWeight:700,color:"#111"}}>${product.price}</span> </h3>
-      </div>
+          <h3>SubTotal ({quantity} item) :<span style={{fontWeight:700,color:"#111"}}>${totalPrice}</span> </h3> {/* Display subtotal */}
+        </div>
         {isError && <div>Error: {isError}</div>}
         <div className="right_buy">
           <button className='rightbuy_btn' onClick={handleProceedToBuy}>Proceed To Buy</button>
