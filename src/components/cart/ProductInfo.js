@@ -26,20 +26,33 @@ const ProductInfo = () => {
   }, [id]);
 
   const addToCart = () => {
-    toast.success("Item added successfully",{position:"top-center",theme: "colored"});
     if (product) {
       // Get the existing cart data from localStorage
       const existingCart = JSON.parse(localStorage.getItem('cartProducts')) || [];
+
+      // Check if the product is already in the cart
+      const existingProductIndex = existingCart.findIndex(item => item.id === product.id);
       
-      // Add the new product to the cart
-      existingCart.push(product);
-      
+      if (existingProductIndex !== -1) {
+        // If the product exists in the cart, increase its quantity
+        existingCart[existingProductIndex].quantity += 1;
+        toast.warning("Product already Added", { position: "top-center", theme: "colored" });
+      } else {
+        // If the product does not exist in the cart, add it with quantity 1
+        existingCart.push({ ...product, quantity: 1 });
+        toast.success("Item added successfully", { position: "top-center", theme: "colored" });
+        
+        // Refresh the page after 2 seconds
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      }
+
       // Save the updated cart data back to localStorage
       localStorage.setItem('cartProducts', JSON.stringify(existingCart));
-      // page refresh jab cart m item add ho jaye
-      window.location.reload();
+      // Update the component state to re-render
+      setProduct({ ...product });
     }
-
   };
 
   if (!product) {
@@ -55,7 +68,6 @@ const ProductInfo = () => {
             <img src={product.image} alt={product.name} />
             <div className="product_btn">
               <button onClick={addToCart} className='product_btn1'>Add To Cart</button>
-              <ToastContainer />
             </div>
           </div>
           <div className="right_product">
@@ -67,7 +79,8 @@ const ProductInfo = () => {
           </div>
         </div>
       </div>
-      {isError && <div>Error: {isError}</div>}
+      {isError && <div className="error">Error: {isError}</div>}
+      <ToastContainer />
       <Footer />
     </>
   );

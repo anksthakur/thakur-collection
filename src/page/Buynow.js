@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import "./Buynow.css";
 import { NavLink } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Buynow = () => {
   //state holds the products in the shopping cart
@@ -22,6 +24,7 @@ const Buynow = () => {
     const newQuantity = parseInt(event.target.value);
     const updatedCartProducts = [...cartProducts];
     updatedCartProducts[index].quantity = newQuantity;
+  
     setCartProducts(updatedCartProducts);
     localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
   };
@@ -30,6 +33,10 @@ const Buynow = () => {
     const updatedCartProducts = cartProducts.filter((_, i) => i !== index);
     setCartProducts(updatedCartProducts);
     localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
+    toast.error("Item deleted successfully", { position: "top-center", theme: "colored" });
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
   };
 
   if (isError) {
@@ -39,6 +46,7 @@ const Buynow = () => {
   return (
     <>
       <Navbar />
+      <ToastContainer/>
       <div className='buynow_section'>
         <div className="buynow_container">
           <div className="left_buy">
@@ -71,6 +79,7 @@ const Buynow = () => {
                     onClick={() => handleRemove(index)}>
                     Delete
                   </button>
+                 
                 </div>
               </div>
             </div>

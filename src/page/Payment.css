@@ -1,21 +1,76 @@
-.payment_outer {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 100px;
-}
+/* Payment.css */
+
 .payment_main {
-    background-color: lightgrey;
-    text-align: center;
-}
-.name {
     display: flex;
-    gap: 10px;
-}
-.payment_outer input[type="text"]{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .payment_outer {
+    background: #fff;
+    padding: 40px;
     border-radius: 10px;
-    outline: none;
-}
-.card_details {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 400px;
+  }
+  
+  .payment_outer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .payment_inner {
     display: flex;
-    gap: 10px;
-}
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .payment_inner input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .name {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .name input {
+    flex: 1;
+  }
+  
+  .email, .card_payment, .card_details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card_details {
+    gap: 15px;
+  }
+  
+  .payment_btn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .pay_btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pay_btn:hover {
+    background-color: #0056b3;
+  }
+  

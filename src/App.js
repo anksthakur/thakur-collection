@@ -22,7 +22,6 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/product/:id" element={<ProductInfo />} />
-          {/* <Route path="/buynow/:id" element={<Buynow />} /> */}
           <Route path="/buynow" element={<Buynow />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="*" element={<ErrorPage />} />
