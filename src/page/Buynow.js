@@ -4,10 +4,12 @@ import { NavLink } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 const Buynow = () => {
+  //state holds the products in the shopping cart
   const [cartProducts, setCartProducts] = useState([]);
   const [isError, setIsError] = useState("");
 
   useEffect(() => {
+    //
     const storedCartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
     if (storedCartProducts.length > 0) {
       setCartProducts(storedCartProducts);
@@ -16,7 +18,7 @@ const Buynow = () => {
     }
   }, []);
 
-  const handleQuantityChange = (index, event) => {
+  const handleQuantity = (index, event) => {
     const newQuantity = parseInt(event.target.value);
     const updatedCartProducts = [...cartProducts];
     updatedCartProducts[index].quantity = newQuantity;
@@ -24,7 +26,7 @@ const Buynow = () => {
     localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
   };
 
-  const handleRemoveProduct = (index) => {
+  const handleRemove = (index) => {
     const updatedCartProducts = cartProducts.filter((_, i) => i !== index);
     setCartProducts(updatedCartProducts);
     localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
@@ -56,7 +58,7 @@ const Buynow = () => {
                 <div className='add_remove_select'>
                   <select 
                     value={product.quantity || 1} 
-                    onChange={(event) => handleQuantityChange(index, event)}>
+                    onChange={(event) => handleQuantity(index, event)}>
                     <option value='1'>1</option>
                     <option value='2'>2</option>
                     <option value='3'>3</option>
@@ -66,7 +68,7 @@ const Buynow = () => {
                   <button 
                     className='remove-btn' 
                     style={{ cursor: "pointer" }}
-                    onClick={() => handleRemoveProduct(index)}>
+                    onClick={() => handleRemove(index)}>
                     Delete
                   </button>
                 </div>
