@@ -7,7 +7,7 @@ import Admin from './page/Admin';
 import ContactUs from './page/ContactUs';
 import Home from './page/Home';
 import ProductInfo from './components/cart/ProductInfo';
-import Buynow from './components/buynow/Buynow';
+import Buynow from './page/Buynow';
 import ErrorPage from './ErrorPage';
 
 function App() {
@@ -21,9 +21,8 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/product/:id" element={<ProductInfo />} />
-          {/* <Route path="/buynow" element={<Buynow />} /> */}
-          <Route path="/buynow/:id" element={<Buynow />} />
-
+          {/* <Route path="/buynow/:id" element={<Buynow />} /> */}
+          <Route path="/buynow" element={<Buynow />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
