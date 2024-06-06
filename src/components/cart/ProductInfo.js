@@ -26,7 +26,7 @@ const ProductInfo = () => {
   }, [id]);
 
   const addToCart = () => {
-    toast.success("Item added successfully",{position:"top-center"});
+    toast.success("Item added successfully",{position:"top-center",theme: "colored"});
     if (product) {
       // Get the existing cart data from localStorage
       const existingCart = JSON.parse(localStorage.getItem('cartProducts')) || [];
@@ -36,7 +36,10 @@ const ProductInfo = () => {
       
       // Save the updated cart data back to localStorage
       localStorage.setItem('cartProducts', JSON.stringify(existingCart));
+      // page refresh jab cart m item add ho jaye
+      window.location.reload();
     }
+
   };
 
   if (!product) {

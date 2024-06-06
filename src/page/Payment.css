@@ -1,0 +1,21 @@
+.payment_outer {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.payment_main {
+    background-color: lightgrey;
+    text-align: center;
+}
+.name {
+    display: flex;
+    gap: 10px;
+}
+.payment_outer input[type="text"]{
+    border-radius: 10px;
+    outline: none;
+}
+.card_details {
+    display: flex;
+    gap: 10px;
+}

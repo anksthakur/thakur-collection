@@ -38,6 +38,10 @@ const Shop = () => {
     //console.log(sortData)
     setData(sortData);
   }
+  const typeCasual = () =>{
+    const sortData = [...Data].filter((item)=>item.type === "casual");
+    setData(sortData);
+  }
   
   return (
     <>
@@ -51,10 +55,12 @@ const Shop = () => {
             <select onChange={(e) => {
               if ( e.target.value === "highToLow") highToLow();
               else if ( e.target.value === "lowToHigh") lowToHigh();
+              if ( e.target.value === "typeCasual") typeCasual();
             }}>
               <option value="">Default sorting</option>
               <option value="highToLow">Sort by price: High to Low</option>
               <option value="lowToHigh">Sort by price: Low to High</option>
+              <option value="typeCasual">Sort by Type</option>
             </select>
           </div>
         </div>

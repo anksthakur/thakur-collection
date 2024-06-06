@@ -47,14 +47,14 @@ const Buynow = () => {
           </div>
         </div>
         {cartProducts.map((product, index) => {
-          const totalPrice = product.price * (product.quantity || 1);
+          const totalPrice = product.price.toFixed(2) * (product.quantity || 1);
           return (
             <div key={`${product.id}-${index}`} className="item_container">
               <img src={product.image} alt={product.name} />
               <div className="item_details">
                 <h3>Title : {product.name}</h3>
                 <h3>Type : {product.category}</h3>
-                <h3 className='item_price'>Price : ${totalPrice}</h3>
+                <h3 className='item_price'>Price : ${totalPrice.toFixed(2)}</h3>
                 <div className='add_remove_select'>
                   <select 
                     value={product.quantity || 1} 
@@ -80,7 +80,7 @@ const Buynow = () => {
           <h3>
             SubTotal ({cartProducts.reduce((acc, product) => acc + (product.quantity || 1), 0)} item) :
             <span style={{ fontWeight: 700, color: "#111" }}>
-              ${cartProducts.reduce((acc, product) => acc + product.price * (product.quantity || 1), 0)}
+              ${cartProducts.reduce((acc, product) => acc + product.price.toFixed(2) * (product.quantity || 1), 0)}
             </span>
           </h3>
         </div>
