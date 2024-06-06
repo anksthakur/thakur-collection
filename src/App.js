@@ -9,6 +9,7 @@ import Home from './page/Home';
 import ProductInfo from './components/cart/ProductInfo';
 import Buynow from './page/Buynow';
 import ErrorPage from './ErrorPage';
+import Payment from './page/Payment';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/product/:id" element={<ProductInfo />} />
           {/* <Route path="/buynow/:id" element={<Buynow />} /> */}
           <Route path="/buynow" element={<Buynow />} />
+          <Route path="/payment" element={<Payment />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
